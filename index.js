@@ -1,16 +1,16 @@
-// Decleare Depenedecny
+// Dependency Declaration
 const randomQuote = require('./lib/RandomQuotes');
 const RandomNumber = require('./lib/RandomNumber');
 
-// App scafolding
+// Scaffolding App
 const app = {};
 
-// App config Declearetion
+// Scaffolding App
 const config = {
     interval: 3000,
 };
 
-// Funciton declear
+// Funciton Declare
 app.printRandomQuote = () => {
     const quotes = randomQuote.getAllQuote();
     const toalQuotes = quotes.length;
@@ -18,6 +18,8 @@ app.printRandomQuote = () => {
     const theQuote = quotes[quoteNumber];
     console.log(theQuote);
 };
+
+// Run printRandomQuote function in 3s interval
 setInterval(() => {
     app.printRandomQuote();
 }, config.interval);
